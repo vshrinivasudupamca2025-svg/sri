@@ -15,212 +15,212 @@
         }
 
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: Arial, sans-serif;
             background: #0b1020;
             color: #f5f7ff;
-            line-height: 1.7;
+            line-height: 1.6;
         }
 
-        :root {
-            --accent: #65e5ff;
-            --muted: #b7c0d8;
-            --card: #141c32;
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #11182b;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #26334d;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #65e5ff;
         }
 
         nav {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 22px 8%;
-            border-bottom: 1px solid #26304b;
-            gap: 20px;
-        }
-
-        .logo {
-            font-size: 25px;
-            font-weight: 800;
-            letter-spacing: 2px;
-            color: var(--accent);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-            flex-wrap: wrap;
+            gap: 24px;
         }
 
         nav a {
-            color: white;
-            text-decoration: none;
+            font-size: 15px;
             transition: color 0.3s;
         }
 
         nav a:hover {
-            color: var(--accent);
+            color: #65e5ff;
+        }
+
+        section {
+            padding: 80px 8%;
         }
 
         .hero {
-            min-height: 82vh;
-            padding: 65px 8%;
+            min-height: 85vh;
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            gap: 60px;
+            align-items: center;
+            gap: 50px;
         }
 
-        .hero-content {
-            max-width: 600px;
-            animation: slideIn 1s ease;
+        .hero-text {
+            flex: 1;
+            animation: fadeIn 1s ease;
         }
 
-        .intro {
-            color: var(--accent);
-            font-weight: 700;
-            letter-spacing: 2px;
-            font-size: 14px;
+        .hero-text .intro {
+            color: #65e5ff;
+            font-size: 18px;
+            margin-bottom: 10px;
         }
 
-        h1 {
-            font-size: clamp(38px, 5vw, 65px);
-            line-height: 1.15;
-            margin: 18px 0;
+        .hero-text h1 {
+            font-size: clamp(36px, 5vw, 58px);
+            line-height: 1.2;
+            margin-bottom: 18px;
         }
 
-        h1 span {
-            color: var(--accent);
+        .hero-text h1 span {
+            color: #65e5ff;
         }
 
-        .hero p {
-            color: var(--muted);
-            font-size: 17px;
-            margin-bottom: 28px;
+        .hero-text p {
+            color: #c0c9dc;
+            max-width: 580px;
+            margin-bottom: 25px;
         }
 
         .buttons {
             display: flex;
-            gap: 14px;
             flex-wrap: wrap;
+            gap: 15px;
         }
 
         .btn {
             display: inline-block;
-            padding: 12px 22px;
+            padding: 12px 24px;
             border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: transform 0.3s, background 0.3s;
+            background: #65e5ff;
+            color: #0b1020;
+            font-weight: bold;
+            border: 2px solid #65e5ff;
+            transition: 0.3s;
         }
 
         .btn:hover {
-            transform: translateY(-4px);
+            background: transparent;
+            color: #65e5ff;
+            transform: translateY(-3px);
         }
 
-        .primary {
-            background: var(--accent);
-            color: #09101f;
+        .btn-outline {
+            background: transparent;
+            color: #65e5ff;
         }
 
-        .secondary {
-            border: 1px solid var(--accent);
-            color: var(--accent);
-        }
-
-        .photo-area {
-            flex-shrink: 0;
-            width: 310px;
-            height: 310px;
+        .profile-image {
+            flex: 0 0 300px;
+            width: 300px;
+            height: 300px;
             border-radius: 50%;
-            padding: 8px;
-            background: linear-gradient(135deg, #65e5ff, #9474ff);
-            box-shadow: 0 0 45px #65e5ff30;
+            overflow: hidden;
+            border: 5px solid #65e5ff;
+            box-shadow: 0 0 35px rgba(101, 229, 255, 0.2);
             animation: float 4s ease-in-out infinite;
         }
 
-        .photo-area img {
+        .profile-image img {
             width: 100%;
             height: 100%;
-            border-radius: 50%;
             object-fit: cover;
-            border: 5px solid #0b1020;
             display: block;
         }
 
-        section {
-            padding: 65px 8%;
-            scroll-margin-top: 20px;
-        }
-
         .section-title {
-            text-align: center;
             font-size: 32px;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
+            text-align: center;
         }
 
         .section-title span {
-            color: var(--accent);
+            color: #65e5ff;
         }
 
-        .about-text {
-            max-width: 800px;
+        .about-content {
+            max-width: 850px;
             margin: auto;
             text-align: center;
-            color: var(--muted);
+            color: #c0c9dc;
+            font-size: 17px;
         }
 
-        .cards {
+        .about-content p {
+            margin-bottom: 15px;
+        }
+
+        .skills-grid,
+        .projects-grid {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 22px;
         }
 
         .card {
-            background: var(--card);
-            border: 1px solid #273450;
-            border-radius: 15px;
-            padding: 27px;
+            background: #141c32;
+            padding: 25px;
+            border-radius: 14px;
+            border: 1px solid #26334d;
             transition: transform 0.3s, border-color 0.3s;
         }
 
         .card:hover {
             transform: translateY(-7px);
-            border-color: var(--accent);
+            border-color: #65e5ff;
         }
 
         .card h3 {
-            color: var(--accent);
+            color: #65e5ff;
             margin-bottom: 12px;
         }
 
         .card p {
-            color: var(--muted);
+            color: #c0c9dc;
         }
 
-        .contact {
+        .contact-content {
+            max-width: 650px;
+            margin: auto;
             text-align: center;
-            background: #10172a;
         }
 
-        .contact p {
-            color: var(--muted);
-            margin-bottom: 22px;
+        .contact-content p {
+            color: #c0c9dc;
+            margin-bottom: 25px;
         }
 
         footer {
             text-align: center;
-            padding: 22px;
-            color: var(--muted);
-            border-top: 1px solid #26304b;
+            padding: 25px 8%;
+            background: #11182b;
+            color: #aeb9ce;
+            border-top: 1px solid #26334d;
         }
 
-        @keyframes slideIn {
+        @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateX(-30px);
+                transform: translateY(20px);
             }
             to {
                 opacity: 1;
-                transform: translateX(0);
+                transform: translateY(0);
             }
         }
 
@@ -229,38 +229,46 @@
                 transform: translateY(0);
             }
             50% {
-                transform: translateY(-12px);
+                transform: translateY(-10px);
             }
         }
 
-        @media (max-width: 800px) {
-            nav {
+        @media (max-width: 768px) {
+            header {
                 flex-direction: column;
+                gap: 15px;
             }
 
-            nav ul {
+            nav {
                 justify-content: center;
-                gap: 15px;
+                flex-wrap: wrap;
+                gap: 14px;
             }
 
             .hero {
                 flex-direction: column-reverse;
+                justify-content: center;
                 text-align: center;
-                padding-top: 45px;
-                gap: 35px;
+                padding-top: 55px;
+            }
+
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
             }
 
             .buttons {
                 justify-content: center;
             }
 
-            .photo-area {
-                width: 235px;
-                height: 235px;
+            .profile-image {
+                flex: none;
+                width: 230px;
+                height: 230px;
             }
 
-            .cards {
-                grid-template-columns: 1fr;
+            section {
+                padding: 60px 6%;
             }
         }
     </style>
@@ -268,165 +276,150 @@
 
 <body>
 
-    <nav>
-        <div class="logo">SU.</div>
+    <header>
+        <a href="#home" class="logo">Srinivas Udupa</a>
 
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-    <main>
-        <section class="hero" id="home">
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <p class="intro">Hello, welcome to my portfolio!</p>
 
-            <div class="hero-content">
-                <div class="intro">
-                    MCA STUDENT | ASPIRING DEVELOPER
-                </div>
-
-                <h1>
-                    Hi, I'm<br>
-                    <span>Srinivas Udupa</span>
-                </h1>
-
-                <p>
-                    Welcome to my personal portfolio!
-                    I am currently pursuing MCA at
-                    Poornaprajna Institute of Management.
-                    I enjoy learning new technologies,
-                    improving my programming skills,
-                    and building useful projects.
-                </p>
-
-                <div class="buttons">
-                    <a href="#projects" class="btn primary">
-                        View My Projects
-                    </a>
-
-                    <!-- Replace this with your actual LinkedIn URL -->
-                    <a
-                        href="https://www.linkedin.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn secondary">
-                        Connect on LinkedIn ↗
-                    </a>
-                </div>
-            </div>
-
-            <div class="photo-area">
-                <img
-                    src="profile.jpg"
-                    alt="Srinivas Udupa profile picture"
-                    onerror="this.onerror=null; this.src='https://placehold.co/500x500/141c32/65e5ff?text=Your+Photo';">
-            </div>
-
-        </section>
-
-        <section id="about">
-            <h2 class="section-title">
-                About <span>Me</span>
-            </h2>
-
-            <p class="about-text">
-                I am Srinivas Udupa, currently pursuing my
-                Master of Computer Applications (MCA) at
-                Poornaprajna Institute of Management.
-                I am interested in technology, programming,
-                and continuous learning. My goal is to develop
-                my technical knowledge and gain practical
-                experience by working on projects.
-            </p>
-        </section>
-
-        <section id="skills">
-            <h2 class="section-title">
-                My <span>Skills</span>
-            </h2>
-
-            <div class="cards">
-                <div class="card">
-                    <h3>Programming</h3>
-                    <p>
-                        Add the programming languages you
-                        have learned, such as JavaScript
-                        or Python.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>Web Development</h3>
-                    <p>
-                        Add your knowledge of HTML, CSS,
-                        JavaScript, and other web technologies.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>Soft Skills</h3>
-                    <p>
-                        Communication, teamwork,
-                        problem-solving, and adaptability.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects">
-            <h2 class="section-title">
-                My <span>Projects</span>
-            </h2>
-
-            <div class="cards">
-                <div class="card">
-                    <h3>Student Management System</h3>
-                    <p>
-                        A student project to manage student
-                        details using HTML, CSS, and JavaScript.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>Personal Portfolio</h3>
-                    <p>
-                        This website introduces my education,
-                        skills, projects, and professional profile.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>Future Projects</h3>
-                    <p>
-                        More projects will be added as I learn
-                        and develop new applications.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="contact" id="contact">
-            <h2 class="section-title">
-                Let's <span>Connect</span>
-            </h2>
+            <h1>Hi, I'm <span>Srinivas Udupa</span></h1>
 
             <p>
-                Connect with me and follow my learning journey.
+                I am currently pursuing Master of Computer Applications (MCA)
+                at Poornaprajna Institute of Management. I am passionate about
+                technology, programming, and learning new skills to build
+                useful and creative projects.
             </p>
 
-            <!-- Replace with your actual LinkedIn profile URL -->
+            <div class="buttons">
+                <a href="#about" class="btn">About Me</a>
+
+                <a href="#projects" class="btn btn-outline">
+                    View Projects
+                </a>
+
+                <a href="https://www.linkedin.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn btn-outline">
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+
+        <div class="profile-image">
+            <img
+                src="srinivas.jpeg"
+                alt="Srinivas Udupa profile picture">
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About <span>Me</span></h2>
+
+        <div class="about-content">
+            <p>
+                My name is Srinivas Udupa, and I am pursuing MCA at
+                Poornaprajna Institute of Management.
+            </p>
+
+            <p>
+                I am interested in developing my technical knowledge,
+                improving my programming skills, and exploring new
+                opportunities in the field of computer applications.
+            </p>
+
+            <p>
+                My goal is to become a skilled professional by continuously
+                learning, practising, and working on real-world projects.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">My <span>Skills</span></h2>
+
+        <div class="skills-grid">
+            <div class="card">
+                <h3>Programming</h3>
+                <p>Learning programming concepts and problem-solving.</p>
+            </div>
+
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>HTML, CSS, JavaScript, and responsive web design.</p>
+            </div>
+
+            <div class="card">
+                <h3>Database</h3>
+                <p>Learning database concepts and data management.</p>
+            </div>
+
+            <div class="card">
+                <h3>Personal Skills</h3>
+                <p>Teamwork, communication, adaptability, and continuous learning.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">My <span>Projects</span></h2>
+
+        <div class="projects-grid">
+            <div class="card">
+                <h3>Personal Portfolio</h3>
+                <p>
+                    A personal website showcasing my introduction,
+                    skills, and projects using HTML and CSS.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Student Management System</h3>
+                <p>
+                    A student management project for organising student
+                    details and practising programming concepts.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Web Development Practice</h3>
+                <p>
+                    Small web projects created to improve my frontend
+                    development and coding skills.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact <span>Me</span></h2>
+
+        <div class="contact-content">
+            <p>
+                Thank you for visiting my portfolio. Feel free to connect
+                with me through LinkedIn.
+            </p>
+
             <a
                 href="https://www.linkedin.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="btn primary">
-                Visit My LinkedIn Profile ↗
+                class="btn">
+                Connect on LinkedIn
             </a>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <footer>
         <p>© 2026 Srinivas Udupa | Personal Portfolio</p>
