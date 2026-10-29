@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Srinivas Udupa | Portfolio</title>
 
     <style>
@@ -46,12 +47,12 @@
 
         nav {
             display: flex;
-            gap: 24px;
+            gap: 22px;
         }
 
         nav a {
             font-size: 15px;
-            transition: color 0.3s;
+            transition: 0.3s;
         }
 
         nav a:hover {
@@ -75,37 +76,38 @@
             animation: fadeIn 1s ease;
         }
 
-        .hero-text .intro {
+        .intro {
             color: #65e5ff;
             font-size: 18px;
             margin-bottom: 10px;
         }
 
-        .hero-text h1 {
+        .hero h1 {
             font-size: clamp(36px, 5vw, 58px);
             line-height: 1.2;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
         }
 
-        .hero-text h1 span {
+        .hero h1 span,
+        .section-title span {
             color: #65e5ff;
         }
 
-        .hero-text p {
+        .hero-text > p:not(.intro) {
             color: #c0c9dc;
-            max-width: 580px;
+            max-width: 600px;
             margin-bottom: 25px;
         }
 
         .buttons {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 14px;
         }
 
         .btn {
             display: inline-block;
-            padding: 12px 24px;
+            padding: 12px 22px;
             border-radius: 8px;
             background: #65e5ff;
             color: #0b1020;
@@ -132,7 +134,7 @@
             border-radius: 50%;
             overflow: hidden;
             border: 5px solid #65e5ff;
-            box-shadow: 0 0 35px rgba(101, 229, 255, 0.2);
+            box-shadow: 0 0 35px #65e5ff30;
             animation: float 4s ease-in-out infinite;
         }
 
@@ -144,13 +146,9 @@
         }
 
         .section-title {
-            font-size: 32px;
-            margin-bottom: 30px;
+            font-size: 34px;
             text-align: center;
-        }
-
-        .section-title span {
-            color: #65e5ff;
+            margin-bottom: 35px;
         }
 
         .about-content {
@@ -162,36 +160,45 @@
         }
 
         .about-content p {
-            margin-bottom: 15px;
+            margin-bottom: 16px;
         }
 
         .skills-grid,
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 22px;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 24px;
         }
 
         .card {
             background: #141c32;
-            padding: 25px;
+            padding: 26px;
             border-radius: 14px;
             border: 1px solid #26334d;
-            transition: transform 0.3s, border-color 0.3s;
+            transition: 0.3s;
         }
 
         .card:hover {
             transform: translateY(-7px);
             border-color: #65e5ff;
+            box-shadow: 0 10px 30px #00000025;
         }
 
         .card h3 {
             color: #65e5ff;
             margin-bottom: 12px;
+            font-size: 20px;
         }
 
         .card p {
             color: #c0c9dc;
+        }
+
+        .project-number {
+            color: #65e5ff;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 8px;
         }
 
         .contact-content {
@@ -247,12 +254,12 @@
 
             .hero {
                 flex-direction: column-reverse;
-                justify-content: center;
                 text-align: center;
+                justify-content: center;
                 padding-top: 55px;
             }
 
-            .hero-text p {
+            .hero-text > p:not(.intro) {
                 margin-left: auto;
                 margin-right: auto;
             }
@@ -295,34 +302,27 @@
             <h1>Hi, I'm <span>Srinivas Udupa</span></h1>
 
             <p>
-                I am currently pursuing Master of Computer Applications (MCA)
-                at Poornaprajna Institute of Management. I am passionate about
-                technology, programming, and learning new skills to build
-                useful and creative projects.
+                I am currently pursuing Master of Computer Applications
+                (MCA) at Poornaprajna Institute of Management. I am
+                interested in programming, web development, and creating
+                practical software solutions.
             </p>
 
             <div class="buttons">
                 <a href="#about" class="btn">About Me</a>
+                <a href="#projects" class="btn btn-outline">My Projects</a>
 
-                <a href="#projects" class="btn btn-outline">
-                    View Projects
-                </a>
-
-                <a href="https://www.linkedin.com/"
+                <a href="https://www.linkedin.com/public-profile/settings/"
                    target="_blank"
                    rel="noopener noreferrer"
                    class="btn btn-outline">
-                    LinkedIn
+                    LinkedIn Profile
                 </a>
             </div>
         </div>
 
         <div class="profile-image">
-            
-            <img
-                src="./Srinivas.jpeg"
-                alt="Srinivas Udupa profile picture">
-
+            <img src="./Srinivas.jpeg" alt="Srinivas Udupa">
         </div>
     </section>
 
@@ -336,14 +336,14 @@
             </p>
 
             <p>
-                I am interested in developing my technical knowledge,
-                improving my programming skills, and exploring new
-                opportunities in the field of computer applications.
+                I am passionate about learning new technologies,
+                improving my coding skills, and developing useful
+                applications through practical projects.
             </p>
 
             <p>
-                My goal is to become a skilled professional by continuously
-                learning, practising, and working on real-world projects.
+                My goal is to continue developing my technical knowledge
+                and build a successful career in the IT industry.
             </p>
         </div>
     </section>
@@ -354,21 +354,21 @@
         <div class="skills-grid">
             <div class="card">
                 <h3>Programming</h3>
-                <p>Learning programming concepts and problem-solving.</p>
+                <p>Programming fundamentals and logical problem-solving.</p>
             </div>
 
             <div class="card">
                 <h3>Web Development</h3>
-                <p>HTML, CSS, JavaScript, and responsive web design.</p>
+                <p>HTML, CSS, JavaScript, and responsive website design.</p>
             </div>
 
             <div class="card">
-                <h3>Database</h3>
-                <p>Learning database concepts and data management.</p>
+                <h3>Database Management</h3>
+                <p>Database concepts and organising application data.</p>
             </div>
 
             <div class="card">
-                <h3>Personal Skills</h3>
+                <h3>Professional Skills</h3>
                 <p>Teamwork, communication, adaptability, and continuous learning.</p>
             </div>
         </div>
@@ -378,29 +378,38 @@
         <h2 class="section-title">My <span>Projects</span></h2>
 
         <div class="projects-grid">
+
             <div class="card">
-                <h3>Personal Portfolio</h3>
+                <p class="project-number">PROJECT 01</p>
+                <h3>Computer Service Management System</h3>
                 <p>
-                    A personal website showcasing my introduction,
-                    skills, and projects using HTML and CSS.
+                    A system designed to organise computer service
+                    requests, maintain customer information, track
+                    repair status, and manage service records.
                 </p>
             </div>
 
             <div class="card">
+                <p class="project-number">PROJECT 02</p>
+                <h3>E-Commerce Website</h3>
+                <p>
+                    An online shopping website concept that allows
+                    users to browse products, view product details,
+                    and explore a convenient shopping experience.
+                </p>
+            </div>
+
+            <div class="card">
+                <p class="project-number">PROJECT 03</p>
                 <h3>Student Management System</h3>
                 <p>
-                    A student management project for organising student
-                    details and practising programming concepts.
+                    An application for managing student information,
+                    including names, ages, courses, and marks, with
+                    options to add, view, search, update, and delete
+                    student records.
                 </p>
             </div>
 
-            <div class="card">
-                <h3>Web Development Practice</h3>
-                <p>
-                    Small web projects created to improve my frontend
-                    development and coding skills.
-                </p>
-            </div>
         </div>
     </section>
 
@@ -409,15 +418,14 @@
 
         <div class="contact-content">
             <p>
-                Thank you for visiting my portfolio. Feel free to connect
-                with me through LinkedIn.
+                Thank you for visiting my portfolio. Connect with me
+                on LinkedIn to view my professional profile.
             </p>
 
-            <a
-                href="https://www.linkedin.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn">
+            <a href="https://www.linkedin.com/public-profile/settings/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn">
                 Connect on LinkedIn
             </a>
         </div>
