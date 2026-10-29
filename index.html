@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,265 +17,247 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: #0b1020;
-            color: #f5f7ff;
+            background: #0b1120;
+            color: #f1f5f9;
             line-height: 1.6;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
         header {
+            background: #111c30;
+            padding: 18px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 8%;
-            background: #11182b;
+            flex-wrap: wrap;
+            gap: 15px;
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 1px solid #26334d;
+            border-bottom: 1px solid #26354d;
         }
 
-        .logo {
-            font-size: 22px;
-            font-weight: bold;
-            color: #65e5ff;
+        header h2 {
+            color: #38bdf8;
         }
 
         nav {
             display: flex;
-            gap: 22px;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
         nav a {
-            font-size: 15px;
+            color: #f1f5f9;
+            text-decoration: none;
             transition: 0.3s;
         }
 
         nav a:hover {
-            color: #65e5ff;
+            color: #38bdf8;
         }
 
         section {
-            padding: 80px 8%;
+            padding: 75px 8%;
         }
 
         .hero {
             min-height: 85vh;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            gap: 50px;
+            justify-content: space-between;
+            gap: 45px;
+            flex-wrap: wrap;
         }
 
-        .hero-text {
+        .hero-content {
             flex: 1;
-            animation: fadeIn 1s ease;
+            min-width: 260px;
         }
 
-        .intro {
-            color: #65e5ff;
+        .hero-content h1 {
+            font-size: clamp(32px, 5vw, 52px);
+            margin-bottom: 15px;
+        }
+
+        .hero-content h1 span {
+            color: #38bdf8;
+        }
+
+        .hero-content p {
+            color: #cbd5e1;
             font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .hero h1 {
-            font-size: clamp(36px, 5vw, 58px);
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 span,
-        .section-title span {
-            color: #65e5ff;
-        }
-
-        .hero-text > p:not(.intro) {
-            color: #c0c9dc;
-            max-width: 600px;
             margin-bottom: 25px;
         }
 
-        .buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
+        .profile-photo {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            border: 4px solid #38bdf8;
+            box-shadow: 0 0 25px #38bdf855;
+            animation: float 3s ease-in-out infinite;
         }
 
         .btn {
             display: inline-block;
+            background: #38bdf8;
+            color: #07111f;
             padding: 12px 22px;
             border-radius: 8px;
-            background: #65e5ff;
-            color: #0b1020;
+            text-decoration: none;
             font-weight: bold;
-            border: 2px solid #65e5ff;
+            margin: 5px 8px 5px 0;
             transition: 0.3s;
         }
 
         .btn:hover {
-            background: transparent;
-            color: #65e5ff;
+            background: #7dd3fc;
             transform: translateY(-3px);
         }
 
-        .btn-outline {
+        .outline-btn {
             background: transparent;
-            color: #65e5ff;
+            color: #38bdf8;
+            border: 1px solid #38bdf8;
         }
 
-        .profile-image {
-            flex: 0 0 300px;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 5px solid #65e5ff;
-            box-shadow: 0 0 35px #65e5ff30;
-            animation: float 4s ease-in-out infinite;
+        .outline-btn:hover {
+            background: #38bdf8;
+            color: #07111f;
         }
 
-        .profile-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .section-title {
-            font-size: 34px;
+        h2.section-title {
             text-align: center;
+            font-size: 32px;
+            color: #38bdf8;
             margin-bottom: 35px;
         }
 
-        .about-content {
+        .about-text {
             max-width: 850px;
             margin: auto;
             text-align: center;
-            color: #c0c9dc;
+            color: #cbd5e1;
             font-size: 17px;
         }
 
-        .about-content p {
-            margin-bottom: 16px;
+        .education {
+            margin-top: 25px;
+            padding: 20px;
+            background: #111c30;
+            border: 1px solid #26354d;
+            border-radius: 12px;
         }
 
         .skills-grid,
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
         }
 
-        .card {
-            background: #141c32;
-            padding: 26px;
-            border-radius: 14px;
-            border: 1px solid #26334d;
+        .skill-card,
+        .project-card {
+            background: #111c30;
+            padding: 25px;
+            border: 1px solid #26354d;
+            border-radius: 12px;
             transition: 0.3s;
         }
 
-        .card:hover {
-            transform: translateY(-7px);
-            border-color: #65e5ff;
-            box-shadow: 0 10px 30px #00000025;
+        .skill-card:hover,
+        .project-card:hover {
+            transform: translateY(-6px);
+            border-color: #38bdf8;
+            box-shadow: 0 8px 25px #00000030;
         }
 
-        .card h3 {
-            color: #65e5ff;
+        .skill-card h3,
+        .project-card h3 {
+            color: #38bdf8;
             margin-bottom: 12px;
-            font-size: 20px;
         }
 
-        .card p {
-            color: #c0c9dc;
+        .skill-card p,
+        .project-card p {
+            color: #cbd5e1;
         }
 
         .project-number {
-            color: #65e5ff;
             font-size: 14px;
-            font-weight: bold;
+            color: #7dd3fc;
             margin-bottom: 8px;
         }
 
-        .contact-content {
+        .contact-box {
             max-width: 650px;
             margin: auto;
             text-align: center;
+            background: #111c30;
+            border: 1px solid #26354d;
+            border-radius: 14px;
+            padding: 30px;
         }
 
-        .contact-content p {
-            color: #c0c9dc;
-            margin-bottom: 25px;
+        .contact-box p {
+            color: #cbd5e1;
+            margin-bottom: 18px;
+        }
+
+        .contact-link {
+            color: #38bdf8;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
         }
 
         footer {
             text-align: center;
-            padding: 25px 8%;
-            background: #11182b;
-            color: #aeb9ce;
-            border-top: 1px solid #26334d;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            padding: 22px;
+            background: #111c30;
+            color: #94a3b8;
+            border-top: 1px solid #26354d;
         }
 
         @keyframes float {
             0%, 100% {
                 transform: translateY(0);
             }
+
             50% {
                 transform: translateY(-10px);
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 700px) {
             header {
-                flex-direction: column;
-                gap: 15px;
+                justify-content: center;
+                text-align: center;
             }
 
             nav {
                 justify-content: center;
-                flex-wrap: wrap;
                 gap: 14px;
             }
 
             .hero {
-                flex-direction: column-reverse;
                 text-align: center;
                 justify-content: center;
                 padding-top: 55px;
             }
 
-            .hero-text > p:not(.intro) {
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .buttons {
-                justify-content: center;
-            }
-
-            .profile-image {
-                flex: none;
-                width: 230px;
-                height: 230px;
+            .profile-photo {
+                width: 220px;
+                height: 220px;
             }
 
             section {
-                padding: 60px 6%;
+                padding: 55px 6%;
             }
         }
     </style>
@@ -284,7 +266,7 @@
 <body>
 
     <header>
-        <a href="#home" class="logo">Srinivas Udupa</a>
+        <h2>Srinivas Udupa</h2>
 
         <nav>
             <a href="#home">Home</a>
@@ -296,117 +278,115 @@
     </header>
 
     <section class="hero" id="home">
-        <div class="hero-text">
-            <p class="intro">Hello, welcome to my portfolio!</p>
-
-            <h1>Hi, I'm <span>Srinivas Udupa</span></h1>
+        <div class="hero-content">
+            <h1>Hello, I'm <span>Srinivas Udupa</span></h1>
 
             <p>
-                I am currently pursuing Master of Computer Applications
-                (MCA) at Poornaprajna Institute of Management. I am
-                interested in programming, web development, and creating
-                practical software solutions.
+                MCA Student | Aspiring Software Developer |
+                Passionate About Technology
             </p>
 
-            <div class="buttons">
-                <a href="#about" class="btn">About Me</a>
-                <a href="#projects" class="btn btn-outline">My Projects</a>
+            <a href="#projects" class="btn">View My Projects</a>
 
-                <a href="https://www.linkedin.com/public-profile/settings/"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="btn btn-outline">
-                    LinkedIn Profile
-                </a>
-            </div>
+            <a href="#contact" class="btn outline-btn">Contact Me</a>
         </div>
 
-        <div class="profile-image">
-            <img src="./Sri.jpeg" alt="Srinivas Udupa">
+        <div>
+            <img
+                src="./Sri.jpeg"
+                alt="Srinivas Udupa"
+                class="profile-photo"
+            >
         </div>
     </section>
 
     <section id="about">
-        <h2 class="section-title">About <span>Me</span></h2>
+        <h2 class="section-title">About Me</h2>
 
-        <div class="about-content">
+        <div class="about-text">
             <p>
-                My name is Srinivas Udupa, and I am pursuing MCA at
-                Poornaprajna Institute of Management.
+                I am Srinivas Udupa, currently pursuing my Master of
+                Computer Applications (MCA) at Poornaprajna Institute
+                of Management.
             </p>
 
             <p>
-                I am passionate about learning new technologies,
-                improving my coding skills, and developing useful
-                applications through practical projects.
+                I am interested in web development, programming, and
+                creating useful software applications. I enjoy learning
+                new technologies, improving my coding skills, and
+                developing projects that solve real-world problems.
             </p>
 
-            <p>
-                My goal is to continue developing my technical knowledge
-                and build a successful career in the IT industry.
-            </p>
+            <div class="education">
+                <h3 style="color: #38bdf8;">Education</h3>
+                <p>
+                    Master of Computer Applications (MCA)
+                </p>
+                <p>
+                    Poornaprajna Institute of Management
+                </p>
+            </div>
         </div>
     </section>
 
     <section id="skills">
-        <h2 class="section-title">My <span>Skills</span></h2>
+        <h2 class="section-title">My Skills</h2>
 
         <div class="skills-grid">
-            <div class="card">
-                <h3>Programming</h3>
-                <p>Programming fundamentals and logical problem-solving.</p>
+            <div class="skill-card">
+                <h3>HTML</h3>
+                <p>Creating structured and accessible web pages.</p>
             </div>
 
-            <div class="card">
-                <h3>Web Development</h3>
-                <p>HTML, CSS, JavaScript, and responsive website design.</p>
+            <div class="skill-card">
+                <h3>CSS</h3>
+                <p>Designing responsive and attractive website layouts.</p>
             </div>
 
-            <div class="card">
-                <h3>Database Management</h3>
-                <p>Database concepts and organising application data.</p>
+            <div class="skill-card">
+                <h3>JavaScript</h3>
+                <p>Adding interactivity and dynamic features to websites.</p>
             </div>
 
-            <div class="card">
-                <h3>Professional Skills</h3>
-                <p>Teamwork, communication, adaptability, and continuous learning.</p>
+            <div class="skill-card">
+                <h3>Python</h3>
+                <p>Developing programs and learning problem-solving concepts.</p>
             </div>
         </div>
     </section>
 
     <section id="projects">
-        <h2 class="section-title">My <span>Projects</span></h2>
+        <h2 class="section-title">My Projects</h2>
 
         <div class="projects-grid">
 
-            <div class="card">
+            <div class="project-card">
                 <p class="project-number">PROJECT 01</p>
                 <h3>Computer Service Management System</h3>
                 <p>
-                    A system designed to organise computer service
+                    A system designed to organize computer service
                     requests, maintain customer information, track
                     repair status, and manage service records.
                 </p>
             </div>
 
-            <div class="card">
+            <div class="project-card">
                 <p class="project-number">PROJECT 02</p>
                 <h3>E-Commerce Website</h3>
                 <p>
-                    An online shopping website concept that allows
-                    users to browse products, view product details,
-                    and explore a convenient shopping experience.
+                    A website concept that allows users to browse
+                    products, explore product details, and enjoy
+                    a simple online shopping experience.
                 </p>
             </div>
 
-            <div class="card">
+            <div class="project-card">
                 <p class="project-number">PROJECT 03</p>
                 <h3>Student Management System</h3>
                 <p>
-                    An application for managing student information,
-                    including names, ages, courses, and marks, with
-                    options to add, view, search, update, and delete
-                    student records.
+                    A web application for managing student details,
+                    courses, and marks, with features to add, view,
+                    search, update, and delete student records.
                 </p>
             </div>
 
@@ -414,26 +394,51 @@
     </section>
 
     <section id="contact">
-        <h2 class="section-title">Contact <span>Me</span></h2>
+        <h2 class="section-title">Contact Me</h2>
 
-        <div class="contact-content">
+        <div class="contact-box">
             <p>
-                Thank you for visiting my portfolio. Connect with me
-                on LinkedIn to view my professional profile.
+                Have a project idea or an opportunity to discuss?
+                Feel free to get in touch.
             </p>
 
-            <a href="https://www.linkedin.com/public-profile/settings/"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="btn">
-                Connect on LinkedIn
+            <p>
+                <strong>Email:</strong>
+                <a
+                    class="contact-link"
+                    href="mailto:snivasa61@gmail.com"
+                >
+                    snivasa61@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <strong>LinkedIn:</strong>
+                <a
+                    class="contact-link"
+                    href="https://www.linkedin.com/public-profile/settings/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Visit My LinkedIn
+                </a>
+            </p>
+
+            <a
+                href="mailto:snivasa61@gmail.com"
+                class="btn"
+            >
+                Send Me an Email
             </a>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Srinivas Udupa | Personal Portfolio</p>
+        <p>
+            &copy; 2026 Srinivas Udupa. All rights reserved.
+        </p>
     </footer>
 
 </body>
 </html>
+```
